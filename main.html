@@ -1,60 +1,94 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="utf-8">
-<title>テトリス</title>
+  <meta charset="utf-8">
+  <title>テトリス</title>
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 
-<!-- Bootstrap Javascript(jQuery含む) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!-- Bootstrap Javascript(jQuery含む) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 
-<script src="js/tumo_detail.js"></script>
-<script src="js/base.js"></script>
+  <script src="js/tumo_detail.js"></script>
+  <script src="js/base.js"></script>
 
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark mt-3 mb-3 sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">テトリス　パフェ判定シミュレーター </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">このサイトについて</a>
+        </li>
 
-<h1>テトリス　パフェ判定シミュレーター </h1>
+      </ul>
+    </div>
+  </nav>
 
-<p>
-<img src="img/pafe.jpeg">
-</p>
 
-<div class="mx-auto col-12">
-<table class="table table-striped">
-  <thead>
+  <p>
+    <div class="mx-auto col-10">
+      <img src="img/pafe.jpeg" class="img-fluid mx-auto d-block" alt="Responsive image">
+    </div>
+  </p>
 
-  <tr>
-    <th>1つ目のミノ</th>
-    <th>2つ目のミノ</th>
-    <th>3つ目のミノ</th>
-    <th>4つ目のミノ</th>
-  </tr>
-  </thead>
+  <div class="container">
+    <div class="mx-auto col-12 ">
+      <table class="table table-striped">
+        <thead>
 
-  <tr>
-    <th><img id="mypic1" src="img/empty.png" class="col-md-2"></th>
-    <th><img id="mypic2" src="img/empty.png" class="col-md-2"></th>
-    <th><img id="mypic3" src="img/empty.png" class="col-md-2"></th>
-    <th><img id="mypic4" src="img/empty.png" class="col-md-2"></th>
-  </tr>
-  </tbody>
-</table>
-</div>
+          <tr>
+            <th>1つ目のミノ</th>
+            <th>2つ目のミノ</th>
+            <th>3つ目のミノ</th>
+            <th>4つ目のミノ</th>
+          </tr>
+        </thead>
 
-<p>
-<input type="button" value="次のツモを表示" onclick="change_tumo();">
+        <tr>
+          <th>
+            <img id="mypic1" src="img/empty.png" class="img-fluid" alt="Responsive image">
+          </th>
+          <th>
+            <img id="mypic2" src="img/empty.png" class="img-fluid" alt="Responsive image">
+          </th>
+          <th>
+            <img id="mypic3" src="img/empty.png" class="img-fluid" alt="Responsive image">
+          </th>
+          <th>
+            <img id="mypic4" src="img/empty.png" class="img-fluid" alt="Responsive image">
+          </th>
+        </tr>
+        </tbody>
+      </table>
 
-<input type="button" value="正解判定" onclick="print_is_perfect(1);">
-</p>
+      <p>
+        <input type="button" value="次のツモを表示" onclick="change_tumo();" class="btn btn-dark">
+        <input type="button" value="正解判定" onclick="print_is_perfect(1);" class="btn btn-dark">
 
-<div id="target">
-</div>
+      </p>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="target">
+    </div>
+  </div>
 
 </body>
 

@@ -20,24 +20,25 @@ function print_is_perfect(){
   }
   let target = document.getElementById("target");
   let s = ""
-  //target.innerHTML = "hoge";
+  
   if(array[num_tumo].is_perfect == 1){
-    s += "パフェはあります\n<br>";
+    s += "<h3>パフェはあります</h3>\n<br>";
+    s += "<table class=\"table table-striped mx-auto col-9 \">"
 
-    s += "<table border=\"1\" width=\"300\"><tbody>";
-    s += "<tr><td>1つ目のミノ</td><td>2つ目のミノ</td><td>3つ目のミノ</td></tr>"
+  
+    s += "<thead><tr><th>1つ目のミノ</th><th>2つ目のミノ</th><th>3つ目のミノ</th></tr></thead>\n"
 
     for(let i = 0; i < array[num_tumo].list.length; ++i){
       s += "<tr>"
       for(let j = 0; j < 3; ++j){
         //s += "<img src=\"img/" + get_imgName(array[num_tumo].list[i][j]) + "\", width=\"120\", height=\"90\">\n";
-        s += "<td><img src=\"img/" + get_imgName(array[num_tumo].list[i][j]) + "\", width=\"120\", height=\"90\"></td>\n";
+        s += "<th><img src=\"img/" + get_imgName(array[num_tumo].list[i][j]) + "\"class=\"img-fluid\" alt=\"Responsive image\"></th>\n";
       }
-      s += "</tr><br>";
+      s += "</tr>\n";
     }
     s += "</tbody></table>"
   }else{
-    s += "パフェはないです";
+    s += "<h3>パフェはないです</h3>";
   }
   target.innerHTML = s;
   console.log(s);
