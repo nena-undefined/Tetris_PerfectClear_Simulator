@@ -26,7 +26,7 @@ function print_is_perfect(){
     s += "<table class=\"table table-striped mx-auto col-9 \">"
 
   
-    s += "<thead><tr><th>1つ目のミノ</th><th>2つ目のミノ</th><th>3つ目のミノ</th></tr></thead>\n"
+    s += "<thead><tr><th>1つ目に使うミノ</th><th>2つ目に使うミノ</th><th>3つ目に使うミノ</th></tr></thead>\n"
 
     for(let i = 0; i < array[num_tumo].list.length; ++i){
       s += "<tr>"
