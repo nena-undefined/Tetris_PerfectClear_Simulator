@@ -23,10 +23,10 @@ function print_is_perfect(){
   
   if(array[num_tumo].is_perfect == 1){
     s += "<h3>パフェはあります</h3>\n<br>";
-    s += "<table class=\"table table-striped mx-auto col-9 \">"
+    s += "<table class=\"table table-striped mx-auto col-12\">"
 
   
-    s += "<thead><tr><th>1つ目に使うミノ</th><th>2つ目に使うミノ</th><th>3つ目に使うミノ</th></tr></thead>\n"
+    s += "<thead><tr><th>1つ目に使うミノ</th><th>2つ目に使うミノ</th><th>3つ目に使うミノ</th><th>テト譜例</th></tr></thead>\n"
 
     for(let i = 0; i < array[num_tumo].list.length; ++i){
       s += "<tr>"
@@ -34,7 +34,8 @@ function print_is_perfect(){
         //s += "<img src=\"img/" + get_imgName(array[num_tumo].list[i][j]) + "\", width=\"120\", height=\"90\">\n";
         s += "<th><img src=\"img/" + get_imgName(array[num_tumo].list[i][j]) + "\"class=\"img-fluid\" alt=\"Responsive image\"></th>\n";
       }
-      s += "</tr>\n";
+       s += "<th><a class=\"btn btn-primary mx-auto\" href=\"" + tetofu[array[num_tumo].list[i]] + "\"# target=\"_blank\" role=\"button\">テト譜</a></th></tr>\n";
+     // s += `<th><a href="${tetofu[array[num_tumo].list[i]]}" target="_blank" class="center-block" >テト譜</a></th></tr>\n`;
     }
     s += "</tbody></table>"
   }else{
